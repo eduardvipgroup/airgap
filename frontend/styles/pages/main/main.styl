@@ -1,0 +1,30 @@
+.main
+  padding .01rem
+  font-size .16rem
+
+  h2
+    &::before, &::after
+      content ''
+      display inline-block
+      vertical-align middle
+
+    &::before
+      @extends $svg-men
+      margin-right .01rem
+
+    &::after
+      @extends $svg-woman
+      margin-left .01rem
+
+  p
+    font-weight 300
+
+    &:first-of-type
+      font-weight normal
+
+.main__images
+  display flex
+  flex-wrap wrap
+
+  img
+    display block

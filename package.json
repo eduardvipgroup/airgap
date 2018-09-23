@@ -1,0 +1,44 @@
+{
+  "name": "airgap",
+  "version": "0.0.1",
+  "description": "new project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduardvipgroup/airgap.git"
+  },
+  "author": "Eduard Panteleev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eduardvipgroup/airgap/issues"
+  },
+  "homepage": "https://github.com/eduardvipgroup/airgap#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "babel-loader": "^8.0.2",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.23.6",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^8.1.1",
+    "gulp-rev-replace": "^0.4.4",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-stylus": "^2.7.0",
+    "gulp-svg-sprite": "^1.3.7",
+    "stream-combiner2": "^1.1.1",
+    "stylus": "^0.54.5",
+    "webpack": "^4.19.1",
+    "webpack-stream": "^5.1.1"
+  }
+}

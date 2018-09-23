@@ -1,0 +1,61 @@
+-
+  'use strict';
+  var pugLib = {};
+  
+  pugLib.formatInt = function (int = 1000) {
+    const splitted = int.toString().split('');
+    let formated = '';
+
+    for (let i = splitted.length, j = 0; i--;) {
+      if (!j || j % 3) {
+        formated = splitted[i] + formated;
+        j++;
+        continue;
+      }
+      formated = splitted[i] + ' ' + formated;
+      j++;
+    }
+    return formated;
+  };
+
+  pugLib.getRnd = function(min, max) {
+    if (!max) {
+      max = min;
+      min = 0;
+    }
+    return min + Math.random() * (max + 1 - min) ^ 0;
+  };
+
+  pugLib.getLoremText = function(length = 10, {useSentences, useEndDot, startFromUpper} = {}) {
+    useEndDot = useEndDot === undefined ? useSentences : useEndDot;
+    startFromUpper = startFromUpper === undefined ? useSentences : startFromUpper;
+
+    const words = 'lorem ipsum dolor sit amet consectetur adipisicing elit laboriosam neque iure quos repellat natus dolore commodi suscipit placeat praesentium tenetur'.split(' ');
+    let generatedText = words[ pugLib.getRnd( words.length - 1 ) ];
+    if (startFromUpper) generatedText = generatedText[0].toUpperCase() + generatedText.slice(1);
+
+    let beforeLastWord, lastWord;
+    for (let i = length, newWord; --i;) {
+      do {
+        newWord = words[ pugLib.getRnd(words.length - 1) ];
+      } while (newWord === lastWord || newWord === beforeLastWord);
+      beforeLastWord = lastWord;
+      lastWord = newWord;
+      generatedText += ' ' + newWord;
+    }
+    
+    if (useSentences) {
+      generatedText = convertToSentences(generatedText);
+    }
+    return(generatedText + ( useEndDot ? '.' : '' ));
+  };
+  
+  function convertToSentences(generatedText) {
+    generatedText = generatedText.split(' ');
+    const end = generatedText.length - pugLib.getRnd(5, 10);
+    for (let i = pugLib.getRnd(5, 10); i < end; i = i + pugLib.getRnd(5, 15) ) {
+      generatedText[i] += '.';
+      generatedText[i + 1] = generatedText[i + 1][0].toUpperCase() + generatedText[i + 1].slice(1);
+    }
+    return generatedText.join(' ');
+  }

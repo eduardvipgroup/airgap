@@ -1,0 +1,54 @@
+@import 'vars'
+header
+  display flex
+  justify-content space-between
+  align-items center
+  background-color  #ffffff
+  box-shadow box-shadow
+  height 1.92rem
+  padding 0 .2rem 0 .2rem
+  a
+    display block
+    .logo
+      width 3.39rem
+      height .73rem
+      background url("../../assets/logo.png") no-repeat
+      position relative
+      cursor pointer
+      margin-right .8rem
+
+      @media (max-width 1280px)
+        background-size 90%
+      &::after
+        content ""
+        position absolute
+        top 25%
+        left 0
+        width 100%
+        height .48rem
+        border-right .02rem solid #dddfe0
+        padding-right .4rem
+  nav
+     text-align left
+     .header__nav_list
+         display flex
+         text-align left
+         li
+            display flex
+            align-items center
+            margin-right 0.3rem
+            font-size font-size-text
+            font-family font-family2
+            text-transform uppercase
+            transform scaleY(1.0005)
+  .tel
+    font-size font-size-tel
+  .button
+    border-radius: .12rem
+    background: linear-gradient(0deg, gradient-button1 0%, gradient-button2 48%, gradient-button3 100%);
+    width: 2.46rem
+    height: .80rem
+    color background
+    font-size .26rem
+
+

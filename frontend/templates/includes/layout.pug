@@ -1,0 +1,21 @@
+doctype html
+include ./dev-assistant.pug
+
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=1280, initial-scale=1")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+
+    block title
+      title Заголовок
+
+    script.
+      var app = {};
+
+    block jsdata
+
+    link(rel="stylesheet", href="styles/app.css")
+    script(src="scripts/app.js")
+
+  block body

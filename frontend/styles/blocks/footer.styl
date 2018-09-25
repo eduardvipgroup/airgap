@@ -1,13 +1,42 @@
+@import 'vars'
 footer
-  box-sizing border-box
   display flex
-  min-height .08rem
-  padding .01rem
-  background burlywood
-
-  a
-    margin auto 0
-    border-bottom 1px solid rgba(black, .33)
-
-    &:focus, &:hover
-      border-color black
+  flex-direction column
+  .footerUp
+     display flex
+     justify-content space-between
+     align-items center
+     background-color  #ffffff
+     height 1.92rem
+     padding 0 .2rem 0 .2rem
+     a
+       display block
+       .logo.logo2
+         width 3.39rem
+         height .73rem
+         background url("../../assets/logo.png") no-repeat
+         cursor pointer
+         margin-right .8rem
+         @media (max-width 1280px)
+           background-size 90%
+     .groupSocial
+        display flex
+        justify-content center
+        i
+           width: .32rem
+           height: .32rem
+           background-color: red
+           border-radius: 50%
+           display: flex
+           align-items: center
+           margin-right: 0.1rem
+           font-size: 0.16rem
+           .fas
+              color: red
+              margin: auto
+              cursor: pointer
+     button.button.button-gray
+        border-radius: .22rem
+  .footerDown
+     display flex
+     justify-content space-between

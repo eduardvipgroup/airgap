@@ -1,5 +1,22 @@
 main.main
-  h2= pugLib.getLoremText(10, {startFromUpper: true})
-  p= pugLib.getLoremText(25, {useSentences: true})
-  p= pugLib.getLoremText(50, {useSentences: true})
+  .main__block
+    .main__block_content
+      h1 Разработка сайтов и мобильных приложений
+      p Ставим во главе угла уникальный дизайн, комплексный подход и качество
+      form.main_form
+        label
+          input
+          span
+      button.button Отправить заявку
+    .main__block_images
+      img.main__block_img(src='styles/imgs/main.jpg')
+    .main__block_round
+      .main__block_round_inner
+        p 42
+          sup %
+        p Увеличение объема интернет-продаж за 2017 г.
+        p * по данным Bizhit.ru
+
+
+  .main__content
 
